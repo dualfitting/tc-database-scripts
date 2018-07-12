@@ -7,6 +7,7 @@ jobs:
       DOCKER_REPO: appiriodevops/tc-database-scripts
     steps:
       - checkout
+      - run: echo 'test'
       - run: .deploy/dockerpush.sh
 
 workflows:
@@ -16,5 +17,4 @@ workflows:
       - build:
           filters:
             branches:
-              # FIXME: The original is master, set dev for test
-              only: dev
+              only: master
