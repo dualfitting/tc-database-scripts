@@ -7,7 +7,6 @@ jobs:
       DOCKER_REPO: appiriodevops/tc-database-scripts
     steps:
       - checkout
-      - setup_remote_docker
       - run: .deploy/dockerpush.sh
 
 workflows:
